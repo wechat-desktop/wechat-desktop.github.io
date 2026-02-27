@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">WeChat on Windows — Unofficial Illustration</title>
+  <desc id="desc">Illustration showing a Windows laptop with chat bubbles and a download cue. Clean, neutral styling without brand logos.</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 315) rotate(90) scale(380 620)">
+      <stop offset="0" stop-color="#10B981" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screenGrad" x1="200" y1="90" x2="1000" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0d1426"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#0EA66A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#halo)"/>
+
+  <!-- Title -->
+  <text x="72" y="88" fill="#FFFFFF" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="40">WeChat on Windows</text>
+  <text x="72" y="128" fill="#93C5FD" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="20">Unofficial desktop helper · Free download · Windows 11/10</text>
+
+  <!-- Laptop base shadow -->
+  <ellipse cx="600" cy="540" rx="340" ry="24" fill="#000" opacity="0.22"/>
+
+  <!-- Laptop frame -->
+  <rect x="200" y="90" width="800" height="450" rx="18" fill="#111827" stroke="#1F2937" stroke-width="2"/>
+  <rect x="212" y="102" width="776" height="426" rx="14" fill="url(#screenGrad)"/>
+
+  <!-- Webcam dot -->
+  <circle cx="600" cy="110" r="4" fill="#334155"/>
+
+  <!-- Screen content: chat bubbles -->
+  <!-- Left bubble (green) -->
+  <rect x="260" y="170" width="300" height="120" rx="20" fill="#10B981"/>
+  <path d="M260 220 L230 235 L260 190" fill="#10B981"/>
+  <!-- Message lines inside left bubble -->
+  <rect x="280" y="195" width="240" height="16" rx="8" fill="#059669"/>
+  <rect x="280" y="220" width="180" height="12" rx="6" fill="#059669" opacity="0.7"/>
+  <rect x="280" y="240" width="210" height="12" rx="6" fill="#059669" opacity="0.7"/>
+
+  <!-- Right bubble (light) -->
+  <rect x="640" y="300" width="300" height="120" rx="20" fill="#E5E7EB"/>
+  <path d="M940 340 L972 355 L940 310" fill="#E5E7EB"/>
+  <!-- Message lines inside right bubble -->
+  <rect x="660" y="325" width="240" height="16" rx="8" fill="#C7CDD6"/>
+  <rect x="660" y="350" width="180" height="12" rx="6" fill="#C7CDD6" opacity="0.7"/>
+  <rect x="660" y="370" width="210" height="12" rx="6" fill="#C7CDD6" opacity="0.7"/>
+
+  <!-- Download cue inside screen -->
+  <g transform="translate(420,440)">
+    <rect x="0" y="0" width="360" height="48" rx="12" fill="url(#btnGrad)"/>
+    <text x="52" y="31" fill="#FFFFFF" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="18">Download for Windows (64-bit)</text>
+    <path d="M24 12 v14 m0 0 l-6 -6 m6 6 l6 -6 M14 36 h20" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Laptop keyboard base -->
+  <path d="M240 540 h720 c18 0 30 12 30 22 v8 H210 v-8 c0 -10 12 -22 30 -22z" fill="#0B0F19"/>
+
+  <!-- Subtext -->
+  <text x="72" y="590" fill="#9CA3AF" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16">Unofficial helper · Not affiliated with WeChat or Tencent</text>
+</svg>
