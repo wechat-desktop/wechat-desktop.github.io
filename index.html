@@ -1,135 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
- <meta name="google-site-verification" content="tTetQclU1MJ0duIWyETyTQKz5ffQvfOdBqUMMY33-R0" />
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J7VS3FG7TW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="robots" content="index,follow">
 
-  gtag('config', 'G-J7VS3FG7TW');
-</script>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-<title>
-微信 Windows 版</title>
-<meta name="keywords" content="PC Windows 微信 聊天 移动聊天 免费 发信息 发图片 语音 weixin 离线消息 微博 私信 流量">
-<meta name="description" content="一款跨平台的通讯工具。支持单人、多人参与。通过手机网络发送语音、图片、视频和文字。">
-<link rel="shortcut icon" type="image/x-icon" href="NTI4MWU5.ico">
-<link rel="apple-touch-icon-precomposed" href="OTE0YTAw.png">
-<script type="module" crossorigin src="index-1e6aa96a1d.js">
-</script>
-<link rel="stylesheet" href="index.9584d86e51.css">
+  <!-- Verification -->
+  <meta name="google-site-verification" content="tTetQclU1MJ0duIWyETyTQKz5ffQvfOdBqUMMY33-R0" />
+  <!-- If you have Bing verification, add it here -->
+  <!-- <meta name="msvalidate.01" content="YOUR-BING-VERIFICATION-CODE"> -->
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wechat-desktop.github.io/">
+
+  <!-- Title & Meta -->
+  <title>WeChat on Windows 11/10 — Unofficial Desktop Helper (Free Download)</title>
+  <meta name="description" content="Unofficial helper to use WeChat on Windows 11/10. Free download, safe (official CDN), step-by-step guide and FAQ. Not affiliated with WeChat/Tencent.">
+  <meta name="keywords" content="WeChat for Windows, WeChat download, Windows 11, Windows 10, unofficial desktop helper, free download, guide, FAQ">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="WeChat on Windows 11/10 — Unofficial Desktop Helper (Free Download)">
+  <meta property="og:description" content="Unofficial helper to use WeChat on Windows 11/10. Free download, safe (official CDN), step-by-step guide and FAQ.">
+  <meta property="og:url" content="https://wechat-desktop.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://wechat-desktop.github.io/images/cover-1200x630.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WeChat on Windows 11/10 — Unofficial Desktop Helper (Free Download)">
+  <meta name="twitter:description" content="Unofficial helper to use WeChat on Windows 11/10. Free download and guide.">
+  <meta name="twitter:image" content="https://wechat-desktop.github.io/images/cover-1200x630.jpg">
+
+  <!-- GA4 -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7VS3FG7TW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-J7VS3FG7TW');
+  </script>
+
+  <!-- Styles (minimal, inline for speed) -->
+  <style>
+    :root { --bg:#0a0a0a; --fg:#111; --text:#1b1b1b; --white:#fff; --muted:#636c76; --accent:#10b981; --border:#e5e7eb; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:#111; background:#fff; }
+    a { color:#0a66c2; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:12px 0 24px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .brand img { width:32px; height:32px; }
+    .disclaimer { font-size:12px; color:#6b7280; }
+    .hero { display:grid; grid-template-columns: 1.2fr 0.8fr; gap:24px; align-items:center; }
+    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
+    h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+    .subtitle { color:#374151; margin-bottom: 16px; }
+    .cta { display:flex; align-items:center; gap:12px; margin: 16px 0 4px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 18px; font-weight:600; color:#fff; background:#10b981; border-radius:10px; box-shadow: 0 6px 18px rgba(16,185,129,0.25); }
+    .btn:hover { filter: brightness(1.05); text-decoration:none; }
+    .btn.secondary { background:#374151; }
+    .meta { font-size:13px; color:#374151; }
+    .card { border:1px solid var(--border); border-radius:12px; padding:16px; background:#fff; }
+    .grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    .faq h3 { margin:0 0 8px; font-size:18px; }
+    .faq p { margin:0 0 12px; color:#374151; }
+    footer { margin-top:32px; padding:16px 0; border-top:1px solid var(--border); color:#6b7280; font-size:13px; }
+    .links { display:flex; gap:12px; flex-wrap:wrap; }
+    .hero-illustration { width:100%; border-radius:12px; border:1px solid #e5e7eb; }
+  </style>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WeChat Desktop Helper (Unofficial)",
+    "description": "Unofficial helper to use WeChat on Windows 11/10. Free download with step-by-step guide and FAQ. Not affiliated with WeChat/Tencent.",
+    "applicationCategory": "CommunicationApplication",
+    "operatingSystem": "Windows 11, Windows 10",
+    "url": "https://wechat-desktop.github.io/",
+    "downloadUrl": "https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.7.exe",
+    "softwareVersion": "4.1.7",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Unofficial Helper",
+      "url": "https://wechat-desktop.github.io/"
+    },
+    "image": [
+      "https://wechat-desktop.github.io/images/cover-1200x630.jpg"
+    ],
+    "screenshot": "https://wechat-desktop.github.io/images/cover-1200x630.jpg",
+    "datePublished": "2026-02-27",
+    "dateModified": "2026-02-27"
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this the official WeChat for Windows?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. This is an unofficial helper page and is not affiliated with WeChat or Tencent."}
+      },
+      {
+        "@type": "Question",
+        "name": "Which Windows versions are supported?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Windows 11 and Windows 10 (64-bit recommended). Older 32-bit builds are deprecated."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to download?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Downloads are served via Tencent's official CDN. We also provide instructions and uninstall steps for transparency."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<div class="page-wrapper">
-<header class="header">
-<img class="logo" src="logo.ca85d20a32.svg" alt="logo">
- <span class="lang">
-<a href="" class="lang-zh-cn en_US">
-简</a>
- <a href="" class="lang-zh-hk lang-zh-tw en_US">
-繁</a>
- <a href="" class="lang-en-us en_US">
-EN</a>
-</span>
-</header>
-<div class="content-wrap">
-<div class="content" id="newVersion">
-<div class="content-title">
-<h1>
-微信 Windows 版</h1>
-  <div class="content-title__subtitle">
-多桌面端统一</div>
+  <div class="container">
+    <header>
+      <div class="brand" role="banner">
+        <img src="icon.svg" alt="Site icon">
+        <div>
+          <strong>WeChat on Windows — Unofficial Helper</strong>
+          <div class="disclaimer">Not affiliated with WeChat or Tencent.</div>
+        </div>
+      </div>
+      <nav aria-label="Language"><!-- optional: add language toggles here --></nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Unofficial WeChat Desktop Helper for Windows</h1>
+        <p class="subtitle">Fast and simple way to use WeChat on Windows 11/10. Free download, safe source, and quick setup.</p>
+        <div class="cta">
+          <a class="btn" id="downloadButton" href="https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.7.exe" target="_blank" rel="nofollow noopener noreferrer" aria-label="Download WeChat for Windows 64-bit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download for Windows (64-bit)
+          </a>
+        </div>
+        <div class="meta">Version 4.1.7 • Supports Windows 11/10 • 64-bit recommended</div>
+        <div class="cta" style="margin-top:12px;">
+          <a class="btn secondary" id="downloadButtonX86" href="https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe" target="_blank" rel="nofollow noopener noreferrer" aria-label="Download WeChat for Windows 32-bit">
+            Download (32-bit, legacy)
+          </a>
+        </div>
+        <div class="meta">32-bit builds are deprecated. Use 64-bit when possible.</div>
+      </div>
+      <div>
+        <img class="hero-illustration" src="https://wechat-desktop.github.io/wechat_windows_illustration.svg" alt="WeChat on Windows illustration">
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:24px;">
+      <div class="card">
+        <h3>Is it safe?</h3>
+        <p>Downloads are served via Tencent's official CDN (<code>dldir1v6.qq.com</code>). This site is an <strong>unofficial</strong> helper and not affiliated with WeChat/Tencent. For transparency, we provide install and uninstall instructions.</p>
+      </div>
+      <div class="card">
+        <h3>System requirements</h3>
+        <p>Windows 11 or Windows 10 (64-bit recommended). Admin rights may be required for installation.</p>
+      </div>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h3>How to install</h3>
+        <ol style="margin:0; padding-left:18px;">
+          <li>Click “Download for Windows (64-bit)”.</li>
+          <li>Open the installer and follow on-screen steps.</li>
+          <li>Launch WeChat and sign in on your PC.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>How to uninstall</h3>
+        <ol style="margin:0; padding-left:18px;">
+          <li>Open Settings → Apps → Installed apps.</li>
+          <li>Find WeChat → Uninstall → Confirm.</li>
+          <li>Restart if prompted.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px;">
+      <h3>FAQ</h3>
+      <div class="faq">
+        <h3>Is this the official WeChat for Windows?</h3>
+        <p>No. This is an unofficial helper page and is not affiliated with WeChat or Tencent.</p>
+        <h3>Which Windows versions are supported?</h3>
+        <p>Windows 11 and Windows 10 (64-bit recommended). Older 32-bit builds are deprecated.</p>
+        <h3>Do I need to pay?</h3>
+        <p>No. The download is free.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 Unofficial Helper. Not affiliated with WeChat or Tencent.</div>
+      <div class="links">
+        <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+        <a href="#" aria-label="Terms">Terms</a>
+        <a href="#" aria-label="Contact">Contact</a>
+      </div>
+    </footer>
   </div>
-<ul class="feature-list en_US">
-  <li>
-Added the Group Note.</li>
-  <li>
-Fixed some known issues.</li>
-  <li class="more-content">
-<a href="" target="_blank">
-更多日志</a>
-<i class="arrow-right-regular">
-</i>
-</li>
-</ul>
-<div class="download">
-<a class="download-button" id="downloadButton" href="../dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.7.exe" role="button">
-<i class="download-icon">
-</i>
-<div class="download-info">
-<div class="download-text">
-下载 4.1.7 (64位)</div>
-<!-- <span class="download-version">
-3.9.12</span>
- -->
-<div class="download-tip">
-适用于 Windows7 及以上版本</div>
-</div>
-</a>
-<div class="download-list">
-<a id="x86" class="download-item x86_tips" href="../dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe" download="WeChatSetup_x86.exe">
- 下载 3.9.12 版本(32位) <div class="download-tip">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 16.6944 7.30558 20.5 12 20.5C16.6944 20.5 20.5 16.6944 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5ZM13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8ZM11.2608 10H12.7608V17H11.2608V10Z" fill="black"/>
-</svg>
-<div class="weui-desktop-popover weui-desktop-popover_pos-up-center" style="">
-<div class="weui-desktop-popover__inner">
-<div class="weui-desktop-popover__desc">
-该版本不再更新，建议使用64位系统电脑下载最新版本。</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="content" style="display:none" id="oldVersion">
-<h1>
-微信 Windows 版</h1>
-<ul class="feature-list en_US">
-  <li>
-Added the Group Note.</li>
-  <li>
-Fixed some known issues.</li>
-  </ul>
-<div class="download">
-<a class="download-button" href="../dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe" download="WeChatSetup_x86.exe" role="button">
-<i class="download-icon">
-</i>
-<div class="download-info">
-<div class="download-text">
-下载 3.9.12</div>
-<!-- <span class="download-version">
-3.9.12</span>
- -->
-<div class="download-tip">
-适用于 Windows7 及以上版本</div>
-</div>
-</a>
-<!-- <div class="download-tip">
-适用于 Windows7 及以上版本</div>
- -->
-</div>
-</div>
-</div>
-<div class="image-area">
-<div class="mobile">
- 请在电脑访问<br>
-<span class="no-bold">
-https://windows.weixin.qq.com</span>
-</div>
-<img class="image" src="http://res.wx.qq.com/t/wx_fed/base/portal/windows/res/assets/image1.282cde7028.svg" alt="">
-</div>
-<footer class="desktop-footer">
-  <p>
-Copyright &copy; 1998-2026 Tencent All Rights Reserved</p>
-</footer>
-</div>
+
+  <!-- GA4 events -->
+  <script>
+    const btn = document.getElementById('downloadButton');
+    const btnX86 = document.getElementById('downloadButtonX86');
+    function trackClick(el, label, arch){
+      if(!el) return;
+      el.addEventListener('click', function(){
+        gtag('event', 'download_click', {
+          event_category: 'cta',
+          event_label: label,
+          value: 1,
+          os: 'Windows',
+          arch: arch,
+          version: '4.1.7',
+          destination: this.href
+        });
+      });
+    }
+    trackClick(btn, 'WeChatWin_4.1.7.exe', 'x64');
+    trackClick(btnX86, 'WeChatSetup_x86.exe', 'x86');
+  </script>
 </body>
 </html>
