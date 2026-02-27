@@ -1,0 +1,22 @@
+/* cookie-consent.css — simple banner to collect consent (show to everyone)
+   Place at: /cookie-consent.css and include in <head>:
+   <link rel="stylesheet" href="/cookie-consent.css?v=1">
+*/
+
+#cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#111827;color:#e5e7eb;border-top:1px solid #374151;box-shadow:0 -6px 20px rgba(0,0,0,.25);transform:translateY(100%);transition:transform .25s ease}
+#cookie-banner.is-visible{transform:translateY(0)}
+#cookie-banner .cc-container{max-width:960px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:16px}
+#cookie-banner .cc-text{flex:1;line-height:1.5}
+#cookie-banner .cc-text strong{color:#fff}
+#cookie-banner .cc-text a{color:#93c5fd}
+#cookie-banner .cc-actions{display:flex;gap:10px;flex-wrap:wrap}
+#cookie-banner .cc-btn{appearance:none;border:1px solid #10b981;background:#10b981;color:#fff;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+#cookie-banner .cc-btn:hover{filter:brightness(1.05)}
+#cookie-banner .cc-btn.secondary{border-color:#6b7280;background:#374151}
+#cookie-banner .cc-manage{color:#9ca3af;font-size:12px;margin-left:8px}
+
+/* Small screens */
+@media (max-width: 640px){
+  #cookie-banner .cc-container{flex-direction:column;align-items:flex-start}
+  #cookie-banner .cc-actions{width:100%}
+}
