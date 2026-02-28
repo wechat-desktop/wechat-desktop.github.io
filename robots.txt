@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow common junk (not required here, but kept as example)
+# Disallow: /tmp/
+# Disallow: /private/
+
+Sitemap: https://wechat-desktop.github.io/sitemap.xml
